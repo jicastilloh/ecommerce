@@ -1,0 +1,22 @@
+<!-- src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" -->
+<div class="card h-full w-[280px] md:w-[300px] bg-card shadow-sm hover:shadow-2xl hover:scale-102 lg:hover:scale-105 transition-transform duration-300">
+  <figure class="px-5 pt-5">
+    <img
+      src="{{'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'}}"
+      alt="Shoes"
+      class="rounded-xl"
+    />
+  </figure>
+  <div class="card-body text-amber-50 items-center text-center">
+    <h2 class="card-title">{{bestProductInfo()?.title}}</h2>
+    <p class="font-thin text-xl">
+      {{bestProductInfo()?.price | currency }}
+    </p>
+    <p class="font-thin text-xl">
+      {{bestProductInfo()?.category }}
+    </p>
+    <div class="card-actions">
+      <button [routerLink]="['/ecommerce', 'products', 'info', bestProductInfo()?.id]" class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="flex md:w-[100%] justify-center">
+    <!-- <h1>{{product()?.title}}</h1> -->
+     <div class="grid grid-cols-1 md:grid-cols-2 m-10 items-center">
+        <div class="w-full md:p-10 justify-items-center">
+            <img class="rounded-2xl shadow-sm hover:shadow-2xl hover:scale-102 lg:hover:scale-105 transition-transform duration-300" src="{{'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'}}" alt="Imagen">
+        </div>
+        <div class="w-full mt-5 md:mt-0 md:p-10 grid gap-4 justify-items-center md:justify-items-start">
+            <h1 class="font-bold text-4xl md:text-8xl xl:text-9xl">{{product()?.title | titlecase }}</h1>
+            <p class="font-thin xl:text-3xl">{{product()?.description}} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta asperiores accusantium in, maxime minus, quas impedit quo quos nihil quae, ad est! Hic, reprehenderit corrupti laudantium delectus aliquid deserunt ab?</p>
+            <h1 class="badge badge-secondary xl:text-4xl h-full">{{product()?.price | currency }}</h1>
+        </div>
+     </div>
+</div>

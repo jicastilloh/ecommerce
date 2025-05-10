@@ -1,0 +1,19 @@
+<div class="flex justify-center">
+    <div class="card bg-base-100 image-full w-96 shadow-sm m-5 hover:shadow-2xl hover:scale-105 lg:hover:scale-110 transition-transform duration-300">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">{{category()?.name | titlecase }}</h2>
+          <p></p>
+          <div class="card-actions justify-end">
+            <button 
+              [routerLink]="['/ecommerce', 'products']" 
+              [queryParams]="{categoryId: category()?.id}"
+              class="btn btn-primary">More</button>
+          </div>
+        </div>
+      </div>
+</div>

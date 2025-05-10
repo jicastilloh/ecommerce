@@ -1,0 +1,8 @@
+<li class="font-thin text-lg">
+    <button
+      class="btn btn-ghost"
+      (click)="categoryInfo.emit({ categoryName: category()?.name ?? '', categoryId: category()?.id ?? 0 })"
+    >
+      {{ category()?.name }}
+    </button>
+  </li>

@@ -1,0 +1,19 @@
+<section class="my-10 mx-5 grid grid-cols-1 md:grid-cols-2">
+  <div class="flex items-center justify-center justify-items-center text-center md:text-left">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold">
+      Best Selling Products
+    </h1>
+    <div class="divider divider-horizontal hidden md:block"></div>
+  </div>
+  <div class="w-full">
+    <div class="carousel carousel-center rounded-box w-full space-x-4 p-4">
+      <div class="carousel-item flex gap-10">
+        @for (prod of bestSellingProducts(); track prod) {
+          <app-best-selling-products-info
+            [bestProductInfo]="prod"
+          ></app-best-selling-products-info>
+        }
+      </div>
+    </div>
+  </div>
+</section>

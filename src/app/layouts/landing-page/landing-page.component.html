@@ -1,0 +1,15 @@
+<!-- <header>
+  <h1>Mi Tienda Online</h1>
+  <nav>
+    <a routerLink="products" routerLinkActive="active">Productos</a>
+    <a routerLink="categories" routerLinkActive="active">Categorías</a>
+  </nav>
+</header> -->
+<main>
+  <app-hero-section></app-hero-section>
+  <app-best-selling-products [bestSellingProducts]="products()"></app-best-selling-products>
+  <div class="divider"></div>
+  <app-categories-section [categories]="categories()"></app-categories-section>
+  <div class="divider"></div>
+  <app-why-choose-us-section></app-why-choose-us-section>
+</main>

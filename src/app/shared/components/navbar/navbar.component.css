@@ -1,0 +1,14 @@
+ul li a:hover {
+    background-color: #0b3046;
+    border-color: #0b3046;
+}
+
+div a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+}
+
+.active-button {
+    background-color: #0b3046;
+}

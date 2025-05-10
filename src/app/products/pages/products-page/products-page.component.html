@@ -1,0 +1,21 @@
+<app-hearders [header]="categoryName()"></app-hearders>
+
+<div class="flex md:w-[100%] justify-center">
+    <div class="w-[25%] p-5 hidden md:block">
+        <app-categories-list (categorySelected)="showTitle($event)"></app-categories-list>
+    </div>
+    <div class="w-[75%] justify-items-center py-5 grid grid-cols-1 justify-center">
+        @if (products().length > 0) {
+            <app-products-section [products]="products()" ></app-products-section>
+        <div class="join">
+            <button class="join-item btn" (click)="previousPage()" [disabled]="currentPage() === 1">«</button>
+            <button class="join-item btn">{{currentPage()}}</button>
+            <button class="join-item btn" (click)="nextPage()" [disabled]="currentPage() >= totalPages()">»</button>
+          </div>
+        }@else {
+            <div class="w-full px-10">
+                <app-not-found [message]="'Products not found ☹️'"></app-not-found>
+            </div>
+        }
+    </div>
+</div>

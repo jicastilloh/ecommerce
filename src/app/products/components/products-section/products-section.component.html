@@ -1,0 +1,5 @@
+<div class="w-full justify-items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 my-5">
+    @for (prod of products(); track prod) {
+        <app-best-selling-products-info [bestProductInfo]="prod"></app-best-selling-products-info>
+    }
+</div>
